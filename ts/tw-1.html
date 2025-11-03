@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Block with image</title>
+  <meta name="description" content="A hero block with a bg image and tinted overlay">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind Animations -->
+  <style>
+    @keyframes slide-in-top {
+      0% { transform: translateY(-1000px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slide-in-left {
+      0% { transform: translateX(-1000px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    .slide-in-top { animation: slide-in-top .5s cubic-bezier(.25,.46,.45,.94) both; }
+    .slide-in-left { animation: slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both; }
+  </style>
+
+</head>
+<body class="font-sans">
+
+<header class="relative flex flex-col justify-center text-center px-[20%] pb-[4%] 
+min-h-[500px] md:min-h-[80vh] overflow-hidden bg-gradient-to-r from-pink-500 to-indigo-800">
+
+  <!-- Text -->
+  <div class="z-20 text-white">
+      <h1 class="text-[clamp(3rem,8vw,7rem)] font-semibold leading-tight tracking-tight mb-6 slide-in-top">
+          Albert Camus
+      </h1>
+      <h2 class="text-[clamp(1.5rem,3vw,3rem)] uppercase font-normal slide-in-left">
+          Creative Web Developer
+      </h2>
+  </div>
+
+  <!-- Background Image -->
+  <img src="assets/img/business.jpg" alt="hero background"
+       class="absolute top-0 left-0 w-full h-full object-cover opacity-40">
+
+  <!-- Overlay -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black/30"></div>
+
+</header>
+
+<section class="bg-red-600 py-10 px-8 lg:px-64">
+  <h2 class="tracking-tight font-semibold text-#4xl lg:text-6xl mb-4">Section Heading</h2>
+  <img src="https://placehold.co/800x400" alt="Placeholder image" class="w-full h-auto mb-4">
+  <p class="text-base lg:text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non feugiat lorem. Aliquam erat volutpat.
+  </p>
+  <p class="text-base lg:text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non feugiat lorem. Aliquam erat volutpat.
+  </p>
+</section>
+
+<section class="bg-yellow-300 py-10 px-8 lg:px-64">
+  <h2 class="tracking-tight font-semibold text-#4xl lg:text-6xl mb-4">Section Heading</h2>
+  <img src="https://placehold.co/800x400" alt="Placeholder image" class="w-full h-auto mb-4">
+  <p class="text-base lg:text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non feugiat lorem. Aliquam erat volutpat.
+  </p>
+  <p class="text-base lg:text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non feugiat lorem. Aliquam erat volutpat.
+  </p>
+</section>
+
+<section class="bg-green-400 py-10 px-8 lg:px-64">
+  <h2 class="tracking-tight font-semibold text-#4xl lg:text-6xl mb-4">Section Heading</h2>
+  <img src="https://placehold.co/800x400" alt="Placeholder image" class="w-full h-auto mb-4">
+  <p class="text-base lg:text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non feugiat lorem. Aliquam erat volutpat.
+  </p>
+  <p class="text-base lg:text-lg mb-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non feugiat lorem. Aliquam erat volutpat.
+  </p>
+</section>
+<p class="text-center mt-6">
+  <a href="../index.html" class="text-blue-600 underline">Go back to the main page</a>
+</p>
+
+</body>
+</html>
